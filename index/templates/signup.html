@@ -1,0 +1,35 @@
+{% load static from staticfiles %}
+
+{% block content %}
+<head>
+	<link rel="stylesheet" href="{% static 'assets/css/main.css'%}" />
+</head>
+
+<div class="modal fade" id="signupModal">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal">&times;</button>
+        		<h4 class="modal-title">Sign Up</h4>
+        		<h6 class="modal-title">*All the fields below are required</h6>
+      		</div>
+      		<div class="modal-body">
+        		<form method="POST" action="{% url 'signup' %}">
+					{% csrf_token %}
+					{{ sign_up_form }}
+					<input type="submit" class="special" value="Sign up">
+				</form>
+      		</div>
+		</div>
+	</div>
+</div>
+
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.scrollzer.min.js' %}"></script>
+<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+<script src="{% static 'assets/js/skel.min.js' %}"></script>
+<script src="{% static 'assets/js/util.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+<script src="{% static 'assets/js/main.js' %}"></script>
+{% endblock %}

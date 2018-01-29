@@ -1,0 +1,225 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Mobile Mutts Denver</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="{% static 'assets/css/main.css'%}" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<!--<button data-toggle="modal" data-target="#signupModal" href="#signupModal">Sign Up</button>-->
+		{% include "signup.html" %}
+		<section id="header">
+			<header>
+				<!--<span class="image avatar"><img src="{% static 'images/avatar.jpg' %}" alt="" /></span>-->
+				<h1 id="logo">Welcome to</h1>
+				<h1 id="logo">Mobile Mutts</h1>
+			</header>
+			<nav id="nav">
+				<ul>
+					<li><a href="#one" class="active">About</a></li>
+					<li><a href="#two">Services</a></li>
+					<li><a href="#three">Rates and Packages</a></li>
+					<li><a href="#four">Contact Us</a></li>
+				</ul>
+			</nav>
+			<!--
+			<footer>
+				<ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+			</footer>
+		-->
+		</section>
+
+		<div id="wrapper">
+			{% if success %}
+				<div class="alert alert-success alert-dismissable fade in">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<strong>{{ success }}</strong>
+            	</div>
+            {% elif error %}
+            	<div class="alert alert-danger alert-dismissable fade in">
+            		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<strong>{{ error }}</strong>
+            	</div>
+			{% endif %}
+			<div id="main">
+				<!-- One -->
+				<section id="one">
+					<div class="container">
+						<header class="major">
+							<h2>About Mobile Mutts</h2>
+							<p>At Mobile Mutts, we are fully invested in the best possible care of your furry family! We provide energy releasing walks for more
+							   playful pups and relaxing walks for the easy going couch potatoes . We will provide him/her with all the physical activity customized
+							   to their individual needs.
+							   <br><br>
+ 							   Additionally, if you ever want pet sitting while you are away, we also offer in-home overnight care. Whether you want your furry friend to
+ 							   get some exercise on a run, enjoy some fresh air and a potty break on a walk, or receive some fun ball-time, we are here to assist with
+ 							   your pet service needs. Mobile Mutts is committed to improving your pet’s overall quality of life while you’re away.
+ 							   <br><br>
+							   We are a small, dedicated business that is passionate about dogs, and make it our business to be knowledgeable and current in all facets
+							   of pet care, including breed specific, so that you can rely on us when you can’t be there for your pet.
+							   <br><br>
+ 							   Our team goes the extra mile to establish a personal relationship with not only your pet, but you as well. With Mobile Mutts, you are more
+ 							   than just a client, we become part of your pack.
+							</p>
+						</header>
+					</div>
+				</section>
+
+				<!-- Two -->
+				<section id="two">
+					<div class="container">
+						<h2>Services</h2>
+						<ul class="feature-icons">
+							<li class="fa-heart">Dog walks available in various time increments for you to choose from</li>
+							<li class="fa-bed">Overnight pet sitting for your dogs and/or cats</li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- Three -->
+				<section id="three">
+					<div class="container">
+						<h2>Rates and Packages</h2>
+						<p>The services listed above can be purchased in various package sizes to accommodate your needs.</p>
+						<div class="features">
+							<article>
+								<!--<a href="#" class="image"><img src="{% static 'images/pic01.jpg' %}" alt="" /></a>-->
+								<div class="inner" style="width: 100%;">
+									<h3>Dog Walking</h3>
+									<p>Walks can be purchased individually as well as in weekly or monthly packages. Got a big family? No worries, just add $3
+									   for each additional dog.
+									</p>
+									<h4>Individual:</h4>
+									<table>
+										<tr>
+											<th>Length of Walk</th>
+											<th>Price</th>
+										</tr>
+										<tr>
+											<td>30 min.</td>
+											<td>$20</td>
+										</tr>
+										<tr>
+											<td>45 min.</td>
+											<td>$25</td>
+										</tr>
+										<tr>
+											<td>60 min.</td>
+											<td>$30</td>
+										</tr>
+									</table>
+									<h4>Weekly:</h4>
+									<table>
+										<tr>
+											<th>Length of Walk</th>
+											<th>Walks/Week</th> 
+											<th>Price</th>
+										</tr>
+										<tr>
+											<td>30 min.</td>
+											<td>3/4/5</td> 
+											<td>$54/$72/$85</td>
+										</tr>
+										<tr>
+											<td>45 min.</td>
+											<td>3/4/5</td> 
+											<td>$67/$90/$106</td>
+										</tr>
+										<tr>
+											<td>60 min.</td>
+											<td>3/4/5</td> 
+											<td>$81/$108/$127</td>
+										</tr>
+									</table>
+									<h4>Monthly:</h4>
+									<table>
+										<tr>
+											<th>Length of Walk</th>
+											<th>Walks/Week</th> 
+											<th>Price</th>
+										</tr>
+										<tr>
+											<td>30 min.</td>
+											<td>3/4/5</td> 
+											<td>$206/$278/$330</td>
+										</tr>
+										<tr>
+											<td>45 min.</td>
+											<td>3/4/5</td> 
+											<td>$258/$350/$414</td>
+										</tr>
+										<tr>
+											<td>60 min.</td>
+											<td>3/4/5</td> 
+											<td>$314/$422/$498</td>
+										</tr>
+									</table>
+									<p>*Major Holidays & Emergency Walks Are 1.5X The Regular Rate</p>
+								</div>
+							</article>
+							<article>
+								<!--<a href="#" class="image"><img src="{% static 'images/pic02.jpg' %}" alt="" /></a>-->
+								<div class="inner" style="width: 100%;">
+									<h3>Overnight Pet Sitting</h3>
+									<p>Starting at $55 this includes morning and evening walks as well as daily potty breaks. Special accommodations and
+									   pricing can be made for longer terms.</p>
+								</div>
+							</article>
+						</div>
+					</div>
+				</section>
+
+				<!-- Four -->
+				<section id="four">
+					<div class="container">
+						<h2>Contact Us</h2>
+						<p>We're here to answer any questions you may have so feel free to contact us about any of our available services.</p>
+						<form role="form" method="post" action=".">
+							{% csrf_token %}
+							{% for field in form  %}
+						    	<div class="col-sm-6">
+						        <b>{{ field.label_tag }}</b>{{ field }} 
+						    	</div>
+						    {% endfor %}
+							</br>
+							<ul class="actions">
+								<input type="submit" class="special" value="Send Message">
+								<li><input type="reset" value="Reset Form" /></li>
+							</ul>
+						</form>
+					</div>
+				</section>
+			</div>
+
+			<!-- Footer -->
+			<section id="footer">
+				<div class="container">
+					<ul class="copyright">
+						<li>&copy; Mobile Mutts Denver. All rights reserved.</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrollzer.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrolly.min.js' %}"></script>
+			<script src="{% static 'assets/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>
