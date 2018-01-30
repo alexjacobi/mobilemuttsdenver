@@ -2,11 +2,13 @@
 
 <!DOCTYPE HTML>
 <html>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<head>
 		<title>Mobile Mutts Denver</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<!--<link rel="stylesheet" href="{% static 'assets/css/bootstrap.css'%}" />-->
 		<link rel="stylesheet" href="{% static 'assets/css/main.css'%}" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
@@ -16,15 +18,14 @@
 		<section id="header">
 			<header>
 				<!--<span class="image avatar"><img src="{% static 'images/avatar.jpg' %}" alt="" /></span>-->
-				<h1 id="logo">Welcome to</h1>
-				<h1 id="logo">Mobile Mutts</h1>
+				<h1 id="logo">Welcome to Mobile Mutts</h1>
 			</header>
 			<nav id="nav">
 				<ul>
-					<li><a href="#one" class="active">About</a></li>
-					<li><a href="#two">Services</a></li>
-					<li><a href="#three">Rates and Packages</a></li>
-					<li><a href="#four">Contact Us</a></li>
+					<li><a onclick="closeNav()" href="#one" class="active">About</a></li>
+					<li><a onclick="closeNav()" href="#two">Services</a></li>
+					<li><a onclick="closeNav()" href="#three">Rates and Packages</a></li>
+					<li><a onclick="closeNav()" href="#four">Contact Us</a></li>
 				</ul>
 			</nav>
 			<!--
@@ -127,18 +128,18 @@
 										</tr>
 										<tr>
 											<td>30 min.</td>
-											<td>3/4/5</td> 
-											<td>$54/$72/$85</td>
+											<td>2/3/4/5</td> 
+											<td>$38/$54/$72/$85</td>
 										</tr>
 										<tr>
 											<td>45 min.</td>
-											<td>3/4/5</td> 
-											<td>$67/$90/$106</td>
+											<td>2/3/4/5</td> 
+											<td>$48/$67/$90/$106</td>
 										</tr>
 										<tr>
 											<td>60 min.</td>
-											<td>3/4/5</td> 
-											<td>$81/$108/$127</td>
+											<td>2/3/4/5</td> 
+											<td>$58/$81/$108/$127</td>
 										</tr>
 									</table>
 									<h4>Monthly:</h4>
@@ -150,18 +151,18 @@
 										</tr>
 										<tr>
 											<td>30 min.</td>
-											<td>3/4/5</td> 
-											<td>$206/$278/$330</td>
+											<td>2/3/4/5</td> 
+											<td>$142/$206/$278/$330</td>
 										</tr>
 										<tr>
 											<td>45 min.</td>
-											<td>3/4/5</td> 
-											<td>$258/$350/$414</td>
+											<td>2/3/4/5</td> 
+											<td>$182/$258/$350/$414</td>
 										</tr>
 										<tr>
 											<td>60 min.</td>
-											<td>3/4/5</td> 
-											<td>$314/$422/$498</td>
+											<td>2/3/4/5</td> 
+											<td>$224/$314/$422/$498</td>
 										</tr>
 									</table>
 									<p>*Major Holidays & Emergency Walks Are 1.5X The Regular Rate</p>
@@ -194,7 +195,7 @@
 							</br>
 							<ul class="actions">
 								<input type="submit" class="special" value="Send Message">
-								<li><input type="reset" value="Reset Form" /></li>
+								<input type="reset" value="Reset Form" />
 							</ul>
 						</form>
 					</div>
@@ -220,6 +221,5 @@
 			<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="{% static 'assets/js/main.js' %}"></script>
-
 	</body>
 </html>

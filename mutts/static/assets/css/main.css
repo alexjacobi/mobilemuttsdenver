@@ -2826,6 +2826,21 @@
 			#one:before {
 				height: 10em;
 			}
+		/* Two */
+
+			#two:before {
+				height: 10em;
+			}
+		/* Three */
+
+			#three:before {
+				height: 10em;
+			}
+		/* Four */
+
+			#four:before {
+				height: 10em;
+			}
 
 		/* Off-Canvas Navigation */
 
@@ -2901,6 +2916,63 @@
 						right: 0;
 					}
 
+			/* Close Navigation */
+
+			#closeNav {
+				-moz-backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				backface-visibility: hidden;
+				-moz-transition: -moz-transform 0.5s ease;
+				-webkit-transition: -webkit-transform 0.5s ease;
+				-ms-transition: -ms-transform 0.5s ease;
+				transition: transform 0.5s ease;
+				display: block;
+				height: 44px;
+				left: 0;
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 10002;
+				color: #fff;
+				min-width: 320px;
+			}
+
+
+				#closeNav .toggle {
+					text-decoration: none;
+					height: 4em;
+					position: absolute;
+					top: 0;
+					width: 6em;
+					border: 0;
+					outline: 0;
+					right: 0;
+				}
+
+					#closeNav .toggle:before {
+						-moz-osx-font-smoothing: grayscale;
+						-webkit-font-smoothing: antialiased;
+						font-family: FontAwesome;
+						font-style: normal;
+						font-weight: normal;
+						text-transform: none !important;
+					}
+
+					#closeNav .toggle:before {
+						background: #4682B4;
+						color: #ffffff;
+						content: '\f00d';
+						display: block;
+						font-size: 18px;
+						height: 44px;
+						line-height: 44px;
+						position: absolute;
+						text-align: center;
+						top: 0;
+						width: 64px;
+					}
+
 			body.header-visible #wrapper, body.header-visible #titleBar {
 				-moz-transform: translateX(-23em);
 				-webkit-transform: translateX(-23em);
@@ -2964,7 +3036,7 @@
 			}
 
 				header.major h2 + p {
-					font-size: 1.5em;
+					font-size: 1.0em;
 				}
 
 		/* Features */
@@ -3022,6 +3094,21 @@
 		/* One */
 
 			#one:before {
+				height: 7em;
+			}
+		/* Two */
+
+			#two:before {
+				height: 7em;
+			}
+		/* Three */
+
+			#three:before {
+				height: 7em;
+			}
+		/* Four */
+
+			#four:before {
 				height: 7em;
 			}
 

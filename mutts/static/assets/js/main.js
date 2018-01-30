@@ -4,6 +4,22 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+// Toggle nav bar for mobile
+function toggleNav(){
+	document.getElementById("header").style.transform = "translateX(17em)";
+    navSize = document.getElementById("header").style.transform;
+    if (navSize == "translateX(17em)") {
+		document.getElementById("header").style.transform = "translateX(0em)";
+    } else {
+		document.getElementById("header").style.transform = "translateX(17em)";
+    }
+}
+
+// Close nav bar for mobile
+function closeNav(){
+	document.getElementById("header").style.transform = "translateX(17em)";
+}
+
 (function($) {
 
 	skel.breakpoints({
@@ -17,7 +33,7 @@
 	$(function() {
 
 		var $body = $('body'),
-			$header = $('#header'),
+			$header = $('#header'), $header_header = $header.find('header'),
 			$nav = $('#nav'), $nav_a = $nav.find('a'),
 			$wrapper = $('#wrapper');
 
@@ -84,11 +100,15 @@
 			// Title Bar.
 				$(
 					'<div id="titleBar">' +
-						'<a href="#header" class="toggle"></a>' +
+						'<a href="#header" class="toggle" onclick="toggleNav()"></a>' +
 						'<span class="title">' + $('#logo').html() + '</span>' +
 					'</div>'
-				)
-					.appendTo($body);
+				).appendTo($body);
+				$(
+					'<div id="closeNav">' +
+						'<a href="#header" class="toggle" onclick="closeNav()"></a>' +
+					'</div>'
+				).appendTo($header_header);
 
 			// Header.
 				$('#header')

@@ -37,6 +37,7 @@ class EmailContactForm(forms.Form):
 
 		return cleaned_data
 
+
 class SignUpForm(UserCreationForm):
     first_name = forms.CharField(
     	required=True,
@@ -70,12 +71,15 @@ class SignUpForm(UserCreationForm):
     	return cleaned_data
 
 
+class RegistrationForm(forms.Form):
+	name = forms.CharField(
+		required=True,
+		label='',
+		widget=forms.TextInput(attrs={'placeholder': 'Name'})
+	)
 
+	def clean(self):
+		cleaned_data = self.cleaned_data
+		name = cleaned_data.get('name')
 
-
-
-
-
-
-
-
+		return cleaned_data
